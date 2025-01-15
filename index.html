@@ -54,17 +54,17 @@
             console.log(data)
             data.data.forEach(row => {
                 console.log(row)
-                createTable(row.stats, row.name, row.time)
+                createTable(row.stats, row.name, row.time, row.desc)
             });
         }).catch(e => alert(e))
     }
 
-    const createTable = (data, name, time) => {
+    const createTable = (data, name, time, desc) => {
         const table = document.createElement('table')
         table.setAttribute('class', 'table table-secondary table-bordered')
         const caption = document.createElement('caption')
         const date = new Date(time)
-        caption.innerHTML = name +  ' ' + date
+        caption.innerHTML = desc +  '<br>' + date
         table.appendChild(caption)
         const body = document.createElement('tbody')
         const head = document.createElement('thead')
