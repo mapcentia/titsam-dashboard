@@ -64,7 +64,7 @@
         table.setAttribute('class', 'table table-secondary table-bordered')
         const caption = document.createElement('caption')
         const date = new Date(time)
-        caption.innerHTML = desc +  '<br>' + date
+        caption.innerHTML = desc +  '<br>' + date.toLocaleDateString()
         table.appendChild(caption)
         const body = document.createElement('tbody')
         const head = document.createElement('thead')
