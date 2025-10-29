@@ -54,7 +54,11 @@
             console.log(data)
             data.data.forEach(row => {
                 console.log(row)
+                try {
                 createTable(row.stats, row.name, row.time, row.desc)
+                } catch(e) {
+                    console.error(e.message)
+                }
             });
         }).catch(e => alert(e))
     }
